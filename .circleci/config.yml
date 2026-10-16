@@ -81,12 +81,12 @@ jobs:
       - run:
           name: Unit tests
           command: |
-            pytest -m "not integration" -v
+            pytest -v tests/test_unit.py
 
       - run:
           name: Integration tests
           command: |
-            pytest -m integration -v
+            pytest -v tests/test_integration.py
 
       - setup_remote_docker
 
