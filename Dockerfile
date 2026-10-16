@@ -7,9 +7,11 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 COPY requirements.txt .
+COPY ruff.toml .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app ./app
+COPY tests ./tests
 
 RUN useradd --create-home appuser
 USER appuser
