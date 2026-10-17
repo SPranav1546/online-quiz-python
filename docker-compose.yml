@@ -43,6 +43,7 @@ services:
         condition: service_healthy
 
   # FastAPI application: builds from the Dockerfile in this project folder.
+  #
   web:
     build: .
     ports:
